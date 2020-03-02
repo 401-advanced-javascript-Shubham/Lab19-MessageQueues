@@ -22,6 +22,7 @@
 * npm init
 * npm i express
 * npm i socket.io socket.io-client
+* npm i uuid
 * npm i -D jest
 
 
