@@ -15,6 +15,15 @@ const flowersSchema = {
 
 const socket =  io.connect('http://localhost:3000/db');
 
+app.get('/', (req,res) => {
+  socket.emit('delivery', 'Testing get route');
+  res.send('ok');
+})
+
+// app.post('/delivery/:retailer/:code', (req,res)=>{
+//   res.send('send it');
+// })
+
 app.post('/delivery/1800-flowers/${flowersID}',flowers)
 
     function flowers(req,res,next){
